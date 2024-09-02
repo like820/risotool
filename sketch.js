@@ -18,13 +18,13 @@ let sizeImageValueText;
 let selcol = [];
 let selcolE = [];
 let selThres = [];
-let selColorName1='MINT';
+let selColorName1='BLUE';
 let selRgb1;
-let selColorName2='FLUORESCENTRED';
+let selColorName2='SEABLUE';
 let selRgb2;
-let selColorName3='FLUORESCENTYELLOW';
+let selColorName3='LAKE';
 let selRgb3;
-let selColorName4='BLACK';
+let selColorName4='MINT';
 let selRgb4;
 let div1;
 let selectsAll;
@@ -68,14 +68,14 @@ noLoop();
 
    //selectors initial set
 
-selcol[1].selected(RISOCOLORS[75].name +" "+ RISOCOLORS[75].color);
-selcol[2].selected(RISOCOLORS[78].name +" "+ RISOCOLORS[78].color);
-selcol[3].selected(RISOCOLORS[77].name +" "+ RISOCOLORS[77].color);
-selcol[4].selected(RISOCOLORS[0].name +" "+ RISOCOLORS[0].color);
-selcol[1].elt.style.backgroundColor="rgb(" +RISOCOLORS[75].color+"";
-selcol[2].elt.style.backgroundColor="rgb(" +RISOCOLORS[78].color+"";
-selcol[3].elt.style.backgroundColor="rgb(" +RISOCOLORS[77].color+"";
-selcol[4].elt.style.backgroundColor="rgb(" +RISOCOLORS[0].color+"";
+selcol[1].selected(RISOCOLORS[2].name +" "+ RISOCOLORS[2].color);
+selcol[2].selected(RISOCOLORS[23].name +" "+ RISOCOLORS[23].color);
+selcol[3].selected(RISOCOLORS[24].name +" "+ RISOCOLORS[24].color);
+selcol[4].selected(RISOCOLORS[75].name +" "+ RISOCOLORS[75].color);
+selcol[1].elt.style.backgroundColor="rgb(" +RISOCOLORS[2].color+"";
+selcol[2].elt.style.backgroundColor="rgb(" +RISOCOLORS[23].color+"";
+selcol[3].elt.style.backgroundColor="rgb(" +RISOCOLORS[24].color+"";
+selcol[4].elt.style.backgroundColor="rgb(" +RISOCOLORS[75].color+"";
 selcol[4].elt.style.color="rgb(" +RISOCOLORS[79].color+"";
 }
 function createColorSelectorsPrint(){
@@ -435,10 +435,7 @@ img.resize(297, 420);
 resizeCanvas(img.width, img.height);
 image(img,0, 0, img.width, img.height);
 makeRiso();
-
 }
-
-
 // resize 
 
 //crop 
