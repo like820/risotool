@@ -31,6 +31,7 @@ let selectsAll;
 let selectButtons;
 let selectInputs;
 let risoButton;
+let cmykButton;
 
 
 let maxOffset=3;
@@ -96,8 +97,6 @@ selcol[i].option(RISOCOLORS[j].name +" "+ RISOCOLORS[j].color);
 selThres[i] = createSlider(0, 255, 130);
 // selThres[i].position(60, 55+(i-1)*40);
 
-
- 
 }
 selcol[1].changed(colorChangedIndicate);
 selcol[2].changed(colorChangedIndicate2);
@@ -129,6 +128,14 @@ risoButton = createButton('Try it!');
   risoButton.elt.style.borderRadius="20%";
 
 
+
+  //make cmykButton (default cmyk colors)
+  cmykButton = createButton('CMYK');
+  cmykButton.position(0, 0);
+  cmykButton.mousePressed(makeCmyk);
+ cmykButton.mousePressed(makeCmyk);
+cmykButton.elt.style.borderRadius="20%";
+//could add a cmyk border or something around it
 
 
    
@@ -238,7 +245,7 @@ function checkImageSize(){
     console.log('whaaat')}
   
   else{
-    console.log('ziom')
+    console.log('wrong size but okay');
     risoButton.elt.style.backgroundColor="rgb(" +RISOCOLORS[78].color+"";
     risoButton.elt.innerHTML = "file size should be 297x420"
 
@@ -442,5 +449,35 @@ makeRiso();
 
 // size increment
 
+function makeCmyk(){
+selcol[1].selected(RISOCOLORS[80].name +" "+ RISOCOLORS[80].color);
+selcol[2].selected(RISOCOLORS[81].name +" "+ RISOCOLORS[81].color);
+selcol[3].selected(RISOCOLORS[13].name +" "+ RISOCOLORS[13].color);
+selcol[4].selected(RISOCOLORS[0].name +" "+ RISOCOLORS[0].color);
 
+selcol[1].elt.style.backgroundColor="rgb(" +RISOCOLORS[80].color+"";
+selcol[2].elt.style.backgroundColor="rgb(" +RISOCOLORS[81].color+"";
+selcol[3].elt.style.backgroundColor="rgb(" +RISOCOLORS[13].color+"";
+selcol[4].elt.style.backgroundColor="rgb(" +RISOCOLORS[0].color+"";
+
+// Update the color variables manually since .selected() doesn't trigger .changed()
+let selValue1 = selcol[1].value().split(" ");
+selColorName1 = selValue1[0];
+selRgb1 = selValue1[1];
+
+let selValue2 = selcol[2].value().split(" ");
+selColorName2 = selValue2[0];
+selRgb2 = selValue2[1];
+
+let selValue3 = selcol[3].value().split(" ");
+selColorName3 = selValue3[0];
+selRgb3 = selValue3[1];
+
+let selValue4 = selcol[4].value().split(" ");
+selColorName4 = selValue4[0];
+selRgb4 = selValue4[1];
+
+
+makeRiso();
+}
 

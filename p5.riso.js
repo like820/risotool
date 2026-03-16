@@ -1,5 +1,5 @@
 let RISOCOLORS = [
-  {name: 'BLACK', color: [0, 0, 0]},
+  {name: 'BLACK', color: [0, 0, 0]},  
   {name: 'BURGUNDY', color: [145, 78, 114]},
   {name: 'BLUE', color: [0, 120, 191]},
   {name: 'GREEN', color: [0, 169, 92]},
@@ -78,7 +78,9 @@ let RISOCOLORS = [
   {name: 'CLEARMEDIUM', color: [242, 242, 242]},
   {name: 'FLUORESCENTYELLOW', color: [255, 233, 22]},
   {name: 'FLUORESCENTRED', color: [255, 76, 101]},
-  {name: 'FLUORESCENTGREEN', color: [68, 214, 44]}
+  {name: 'FLUORESCENTGREEN', color: [68, 214, 44]},
+  {name: 'CYAN', color: [0, 255, 255]},
+  {name: 'MAGENTA', color: [255, 0, 255]}
 ];
 
 class Riso extends p5.Graphics {
