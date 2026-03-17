@@ -133,8 +133,8 @@ risoButton = createButton('Try it!');
   cmykButton = createButton('CMYK');
   cmykButton.position(0, 0);
   cmykButton.mousePressed(makeCmyk);
- cmykButton.mousePressed(makeCmyk);
-cmykButton.elt.style.borderRadius="20%";
+  cmykButton.class('cmyk-btn');
+  cmykButton.elt.style.borderRadius="20%";
 //could add a cmyk border or something around it
 
 

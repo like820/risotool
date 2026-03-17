@@ -26,6 +26,11 @@ button{
   width: 150px;
   font-size:0.8em;
 }
+.cmyk-btn {
+  background: linear-gradient(to right, cyan, magenta, yellow, black);
+  color: white;
+  border: 2px solid black;
+}
 input{
   position: relative !important;
   /* grid-row: 1; */
